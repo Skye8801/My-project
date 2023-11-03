@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start scene.unity
     guid: f80f13f27a94d3c4d819330de251edf3
   - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 14c2fd446ef1d3e4a8d1a186bd0ca72d
+  - enabled: 1
     path: Assets/Scenes/MazeLevel1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/End Screen.unity
+    guid: 11bcd73a00a2be248a68cda763b1a95e
   m_configObjects: {}
