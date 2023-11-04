@@ -15,7 +15,8 @@ public class Finish : MonoBehaviour
         void OnTriggerEnter(Collider collider)
         {
             if (collider.gameObject.tag == "Player")
-            if (collider.gameObject.tag == "SceneTransitionTag")
+
+
             {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }

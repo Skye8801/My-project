@@ -48,9 +48,7 @@ public class CharacterMove : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
 
-        SceneManager.LoadScene("End Screen");
-
-        if (collision.gameObject.tag == "SceneTransitionTag")
+        if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
