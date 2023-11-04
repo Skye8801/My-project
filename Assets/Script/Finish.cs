@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    public string LevelName;
 
-    private void OnTriggerEnter(Collider other)
+    
+    void Start()
     {
-        
+
     }
+        void OnTriggerEnter(Collider collider)
+        {
+            if (collider.gameObject.tag == "Player")
+            if (collider.gameObject.tag == "SceneTransitionTag")
+            {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
 }

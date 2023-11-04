@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -41,6 +42,17 @@ public class CharacterMove : MonoBehaviour
         if (direction != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(direction);
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+
+        SceneManager.LoadScene("End Screen");
+
+        if (collision.gameObject.tag == "SceneTransitionTag")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
