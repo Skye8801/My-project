@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndTrigger : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
-    private void OnTriggerEnter()
+    public void StartMazeRun()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+
 }
