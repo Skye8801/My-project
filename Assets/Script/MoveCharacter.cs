@@ -7,6 +7,7 @@ public class CharacterMove : MonoBehaviour
 {
     public Transform cameraTransform;
     public float playerSpeed = 5f;
+    public AudioClip clip;
 
     Rigidbody body;
     float horizontal;
@@ -47,7 +48,7 @@ public class CharacterMove : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-
+        collision.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
